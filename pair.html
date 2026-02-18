@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pairing Code - KINGSLEY-XD</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(145deg, #0d1117 0%, #1a1f2b 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #e6edf3;
+    }
+    .container {
+      background: rgba(22, 27, 34, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 2.5rem;
+      border-radius: 2rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255,255,255,0.05) inset;
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #a78bfa, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+    .sub {
+      color: #8b949e;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+    .logo {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 4px 6px rgba(168, 85, 247, 0.4));
+    }
+    .input-group {
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: #c9d1d9;
+    }
+    input {
+      width: 100%;
+      padding: 1rem 1.2rem;
+      background: #0d1117;
+      border: 2px solid #30363d;
+      border-radius: 1.5rem;
+      font-size: 1.1rem;
+      color: #fff;
+      outline: none;
+      transition: 0.2s;
+    }
+    input:focus {
+      border-color: #a78bfa;
+      box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.3);
+    }
+    button {
+      background: linear-gradient(145deg, #7c3aed, #c026d3);
+      border: none;
+      color: white;
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 3rem;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+      width: 100%;
+    }
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(192, 38, 211, 0.6);
+    }
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #6e7681;
+    }
+    .footer a {
+      color: #a78bfa;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">🤖</div>
+    <h1>KINGSLEY-XD</h1>
+    <div class="sub">Pairing Code Login</div>
+    
+    <form action="/pair" method="POST">
+      <div class="input-group">
+        <label>📱 Your WhatsApp number</label>
+        <input type="text" name="phone" placeholder="e.g. 254712345678" required pattern="\d+" title="Numbers only">
+        <small style="color:#8b949e; display:block; margin-top:8px;">Include country code, no spaces or +</small>
+      </div>
+      <button type="submit">Generate Pairing Code</button>
+    </form>
+    
+    <div class="footer">
+      Powered by KINGSLEY-XD • <a href="/">Home</a> • <a href="/qr">QR Login</a>
+    </div>
+  </div>
+</body>
+</html>
