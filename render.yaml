@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: kingsley-xd-bot
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: BOT_NAME
+        value: KINGSLEY-XD
