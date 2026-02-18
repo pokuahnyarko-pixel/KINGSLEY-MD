@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QR Login - KINGSLEY-XD</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(145deg, #0d1117 0%, #1a1f2b 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #e6edf3;
+    }
+    .container {
+      background: rgba(22, 27, 34, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 2.5rem;
+      border-radius: 2rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255,255,255,0.05) inset;
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #a78bfa, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+    .sub {
+      color: #8b949e;
+      margin-bottom: 2rem;
+    }
+    .logo {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 4px 6px rgba(168, 85, 247, 0.4));
+    }
+    .qr-box {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 2rem;
+      display: inline-block;
+      margin: 1rem 0;
+      box-shadow: 0 20px 35px -8px black;
+    }
+    #qrCanvas {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    .note {
+      color: #8b949e;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    .refresh-btn {
+      background: linear-gradient(145deg, #3b82f6, #8b5cf6);
+      border: none;
+      color: white;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 3rem;
+      cursor: pointer;
+      transition: 0.2s;
+      border: 1px solid rgba(255,255,255,0.1);
+      margin-top: 1rem;
+    }
+    .refresh-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px #3b82f680;
+    }
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #6e7681;
+    }
+    .footer a {
+      color: #a78bfa;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">📱</div>
+    <h1>KINGSLEY-XD</h1>
+    <div class="sub">Scan QR with WhatsApp</div>
+    
+    <div class="qr-box">
+      <img id="qrCanvas" src="" alt="QR Code loading...">
+    </div>
+    
+    <p class="note">Open WhatsApp > Linked Devices > Scan</p>
+    <button class="refresh-btn" onclick="location.reload()">⟳ Refresh QR</button>
+    
+    <div class="footer">
+      Powered by KINGSLEY-XD • <a href="/">Home</a> • <a href="/pair">Pairing Code</a>
+    </div>
+  </div>
+  
+  <script>
+    // Fetch QR from server endpoint /qr/image or similar.
+    // Since our /qr route already generates the page with QR, we just need to reload.
+    // To keep it simple, we rely on server-rendered QR.
+    // For dynamic updates, you'd use WebSocket, but here we just reload.
+    // If the QR isn't showing, the server will render it when you load /qr.
+  </script>
+</body>
+</html>
